@@ -1,0 +1,58 @@
+# Query: http://localhost:8080
+# ContextLines: 1
+
+11 results - 10 files
+
+FRONTEND\src\App.jsx:
+  30      axios
+  31:       .get("http://localhost:8080/api/projects")
+  32        .then((response) => {
+
+FRONTEND\src\pages\CreateProject.jsx:
+  36        const response = await axios.post(
+  37:         "/api/projects",
+  38          {
+
+FRONTEND\src\pages\EditProject.jsx:
+  30        const response = await axios.put(
+  31:         `http://localhost:8080/api/projects/${id}`,
+  32          {
+
+FRONTEND\src\pages\JoinRequests.jsx:
+  15        const response = await axios.get(
+  16:         "http://localhost:8080/api/join-requests"
+  17        );
+
+  43        const response = await axios.put(
+  44:         `http://localhost:8080/api/join-requests/${id}/status?status=${status}`
+  45        );
+
+FRONTEND\src\pages\Login.jsx:
+  17        const response = await axios.post(
+  18:         "http://localhost:8080/api/users/login",
+  19          user
+
+FRONTEND\src\pages\MyRequests.jsx:
+  18          const response = await axios.get(
+  19:           "http://localhost:8080/api/join-requests"
+  20          );
+
+FRONTEND\src\pages\Profile.jsx:
+  33        const response = await axios.put(
+  34:         `http://localhost:8080/api/users/${currentUser.id}`,
+  35          {
+
+FRONTEND\src\pages\ProjectDetails.jsx:
+  72        await axios.post(
+  73:         "http://localhost:8080/api/join-requests",
+  74          newRequest
+
+FRONTEND\src\pages\Projects.jsx:
+  30      try {
+  31:       await axios.delete(`http://localhost:8080/api/projects/${id}`);
+  32        setProjects(projects.filter((project) => project.id !== id));
+
+FRONTEND\src\pages\Register.jsx:
+  22      try {
+  23:       await axios.post("http://localhost:8080/api/users/register", {
+  24          ...user,
